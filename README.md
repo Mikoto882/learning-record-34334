@@ -1,24 +1,55 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| nickname           | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :learns
+- has_many :comments
+- has_one :profile
 
-* Configuration
+## learns テーブル
 
-* Database creation
+| Column      | Type       | Options           |
+| ----------- | ---------- | ----------------- |
+| title       | string     | null: false       |
+| description | text       |                   |
+| subject     | integer    | null: false       |
+| time        | date       |                   |
+| user        | references | foreign_key: true |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- belongs_to :user
+- has_many :comments
 
-* Services (job queues, cache servers, search engines, etc.)
+## comments テーブル
 
-* Deployment instructions
+| Column  | Type       | Options           |
+| ------- | ---------- | ----------------- |
+| content | text       | null: false       |
+| user    | references | foreign_key: true |
+| learn   | references | foreign_key: true |
 
-* ...
+### Association
+
+- belongs_to :user
+- belongs_to :learn
+
+## profiles テーブル
+
+| Column       | Type       | Options           |
+| ------------ | ---------- | ----------------- |
+| introduction | text       |                   |
+| grade        | integer    |                   |
+| user         | references | foreign_key: true |
+
+### Association
+
+- belongs_to :user
