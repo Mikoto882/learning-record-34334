@@ -16,37 +16,22 @@
   padding: 0 20px;
 }
 
-.header-name {
-  padding: 20px 0 10px;
+.list {
+  padding-top: 36px;
 }
 
-.header-name a {
-  font-size: 25px;
+.user-name a {
+  font-size: 24px;
   color: #ffffff;
-  text-decoration: none;
   padding-left: 10px;
-}
-
-.sign-btn {
-  padding: 10px 0;
+  text-decoration: none;
 }
 
 .sign-btn a {
+  display: block;
   font-size: 16px;
   color: #ffffff;
-  text-decoration: none;
-  padding-left: 10px;
-}
-
-.record-create {
-  padding: 20px 10px 10px;
-}
-
-.record-create a {
-  font-size: 16px;
-  border: 1px solid darkred;
-  padding: 15px;
-  color: darkred;
+  padding: 20px 0 0 20px;
   text-decoration: none;
 }
 
@@ -61,12 +46,24 @@
 .record-header {
   height: 100px;
   padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-title {
   padding-top: 36px;
   font-size: 24px;
   color: #333;
+}
+
+.record-create a {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  background-color: #99CEE2;
+  padding: 10px 20px;
+  margin-top: 30px;
 }
 
 .records {
