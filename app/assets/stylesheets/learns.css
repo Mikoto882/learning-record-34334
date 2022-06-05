@@ -2,20 +2,59 @@
   display: flex;
 }
 
+/* サイドバー */
+
 .side-bar {
   height: 100vh;
-  width: 300px;
+  width: 200px;
   background-color: #567986;
 }
 
 .side-lists {
   height: 100vh;
-  width: 300px;
+  width: 200px;
   padding: 0 20px;
 }
 
+.header-name {
+  padding: 20px 0 10px;
+}
+
+.header-name a {
+  font-size: 25px;
+  color: #ffffff;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.sign-btn {
+  padding: 10px 0;
+}
+
+.sign-btn a {
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.record-create {
+  padding: 20px 10px 10px;
+}
+
+.record-create a {
+  font-size: 16px;
+  border: 1px solid darkred;
+  padding: 15px;
+  color: darkred;
+  text-decoration: none;
+}
+
+/* サイドバー（ここまで） */
+/* 学習記録一覧 */
+
 .learn-record {
-  width: calc(100vw - 300px);
+  width: calc(100vw - 200px);
   background-color: #ffffff;
 }
 
@@ -29,3 +68,5 @@
   background-color: #fafafa;
   padding: 46px 40px 0;
 }
+
+/* 学習記録一覧（ここまで） */
