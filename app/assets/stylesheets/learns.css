@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+}
+
+.side-bar {
+  height: 100vh;
+  width: 300px;
+  background-color: #567986;
+}
+
+.side-lists {
+  height: 100vh;
+  width: 300px;
+  padding: 0 20px;
+}
+
+.learn-record {
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+}
+
+.record-header {
+  height: 100px;
+  padding: 0 40px;
+}
+
+.records {
+  height: calc(100vh - 100px);
+  background-color: #fafafa;
+  padding: 46px 40px 0;
+}
