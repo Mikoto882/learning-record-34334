@@ -22,4 +22,8 @@ class Subject < ActiveHash::Base
     { id: 20, name: '公民' }
     { id: 21, name: 'その他' }
   ]
+
+  include ActiveHash::Associations
+  has_many :learns
+  
 end
