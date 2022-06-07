@@ -4,7 +4,7 @@ class CreateLearns < ActiveRecord::Migration[6.0]
       t.string :title,       null: false
       t.text :description
       t.integer :subject_id, null: false
-      t.date :time
+      t.string :study_time
       t.references :user,    foreign_key: true
       t.timestamps
     end

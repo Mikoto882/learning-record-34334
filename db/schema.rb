@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2022_06_07_044227) do
     t.string "title", null: false
     t.text "description"
     t.integer "subject_id", null: false
-    t.date "time"
+    t.string "study_time"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
