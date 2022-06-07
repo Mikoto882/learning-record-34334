@@ -1,7 +1,7 @@
 class LearnsController < ApplicationController
 
   def index
-    @learns = Learn.all
+    @learns = Learn.order("created_at DESC")
   end
 
 end
