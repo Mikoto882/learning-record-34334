@@ -20,7 +20,7 @@
 | ------------- | ---------- | ----------------- |
 | title         | string     | null: false       |
 | description   | text       |                   |
-| subject       | integer    | null: false       |
+| subject_id    | integer    | null: false       |
 | study_hour    | string     |                   |
 | study_minutes | string     |                   |
 | user          | references | foreign_key: true |
