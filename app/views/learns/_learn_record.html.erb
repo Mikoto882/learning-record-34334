@@ -6,48 +6,31 @@
   </div>
   <div class="right-header">
     <div class="record-create">
-      <a href="#">新しい記録を作る</a>
+      <%= link_to "新しい記録を作る", new_learn_path %>
     </div>
   </div>
 </div>
+
 <div class="records">
-
-  <div class="record">
-    <div class="record-top">
-      <div class="record-title">
-        タイトル
-      </div>
-      <div class="record-subject">
-        教科
-      </div>
-      <div class="record-date">
-        2022/4/30 12:30:30
-      </div>
-    </div>
-    <div class="record-bottom">
-      <div class="record-text">
-        テキスト
-      </div>
-    </div>
-  </div>
-
+  <% @learns.each do |learn| %>
     <div class="record">
-    <div class="record-top">
-      <div class="record-title">
-        タイトル
+      <div class="record-top">
+        <div class="record-title">
+          <%= learn.title %>
+        </div>
+        <div class="record-subject">
+          <%= learn.subject.name %>
+        </div>
+        <div class="record-date">
+          <%= learn.created_at %>
+        </div>
       </div>
-      <div class="record-subject">
-        教科
-      </div>
-      <div class="record-date">
-        2022/4/30 12:30:30
+      <div class="record-bottom">
+        <div class="record-text">
+          <%= learn.description %>
+        </div>
+        <%= image_tag learn.image.variant(resize: '500x500'), class: 'learn-image' if learn.image.attached? %>
       </div>
     </div>
-    <div class="record-bottom">
-      <div class="record-text">
-        テキスト
-      </div>
-    </div>
-  </div>
-
+  <% end %>
 </div>

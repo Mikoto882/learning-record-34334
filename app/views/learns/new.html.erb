@@ -1,0 +1,60 @@
+<div class="learn-record-container">
+  <div class="learn-record-title">
+    <h2>新しい記録</h2>
+  </div>
+
+  <%= form_with model: @learn, url: learns_path, local: true do |f| %>
+
+  <div class="learn-form-group">
+    <div class="weight-bold-text">
+      タイトル
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :title, class:"learns-title", id:"learn-title", placeholder:"40文字まで", maxlength:"40" %>
+  </div>
+
+  <div class="learn-form-group">
+    <div class="weight-bold-text">
+      説明文
+    </div>
+    <%= f.text_area :description, class:"learns-description", id:"learn-info", placeholder:"1000文字まで", maxlength:"1000" %>
+  </div>
+
+  <div class="learn-form-group">
+    <div class="weight-bold-text">
+      教科
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.collection_select(:subject_id, Subject.all, :id, :name, {}, {class:"select-box", id:"learn-subject"}) %>
+  </div>
+
+  <div class="learn-form-group">
+    <div class="weight-bold-text">
+      学習時間
+    </div>
+    <div class="learns-time">
+      <div class="time-form">
+        <%= f.text_field :study_hour, class:"learn-time", id:"study-hours" %><span>時間</span>
+      </div>
+      <div class="time-form">
+        <%= f.text_field :study_minutes, class:"learn-time", id:"study-minutes" %><span>分</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="learn-form-group">
+    <div class="image-title">
+      画像
+    </div>
+    <label class="form-image">
+      <span class="image-file">画像を選択する</span>
+      <%= f.file_field :image, class: "hidden" %>
+    </label>
+  </div>
+
+  <div class="learn-post-btn">
+    <%= f.submit "記録する", class:"post-btn" %>
+  </div>
+  <% end %>
+
+</div>

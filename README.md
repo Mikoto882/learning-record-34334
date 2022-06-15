@@ -16,13 +16,14 @@
 
 ## learns テーブル
 
-| Column      | Type       | Options           |
-| ----------- | ---------- | ----------------- |
-| title       | string     | null: false       |
-| description | text       |                   |
-| subject     | integer    | null: false       |
-| time        | date       |                   |
-| user        | references | foreign_key: true |
+| Column        | Type       | Options           |
+| ------------- | ---------- | ----------------- |
+| title         | string     | null: false       |
+| description   | text       |                   |
+| subject_id    | integer    | null: false       |
+| study_hour    | string     |                   |
+| study_minutes | string     |                   |
+| user          | references | foreign_key: true |
 
 ### Association
 
