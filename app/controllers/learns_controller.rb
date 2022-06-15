@@ -10,6 +10,11 @@ class LearnsController < ApplicationController
 
   def create
     @learns = Learn.new(learn_params)
+    if @learns.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
