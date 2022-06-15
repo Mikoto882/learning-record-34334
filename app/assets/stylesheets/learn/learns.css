@@ -27,8 +27,25 @@
   text-decoration: none;
 }
 
+.sign-btn {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  color: #ffffff;
+  padding: 20px 0 0 20px;
+  text-decoration: none;
+}
+
 .sign-btn a {
-  display: block;
+  font-size: 16px;
+  color: #ffffff;
+  padding-top: 20px;
+  text-decoration: none;
+}
+
+.sign-out-btn {
+  display: flex;
+  flex-direction: column;
   font-size: 16px;
   color: #ffffff;
   padding: 20px 0 0 20px;
