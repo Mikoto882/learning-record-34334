@@ -188,6 +188,24 @@
   font-size: 16px;
 }
 
+.image-title {
+  padding: 0 0 10px 10px;
+}
+
+.form-image {
+  font-size: 12px;
+  background-color: #99CEE2;
+  color: #434a54;
+  padding: 12px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
 .learn-post-btn {
   text-align: center;
   margin: 30px 0;
