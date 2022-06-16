@@ -285,6 +285,10 @@
   margin-bottom: 10px;
 }
 
+.show-btn {
+  display: flex;
+}
+
 .show-btn a {
   display: block;
   width: 100px;
@@ -292,6 +296,7 @@
   color: #333;
   background-color: #99CEE2;
   padding: 5px 10px;
+  margin-right: 10px;
   text-align: center;
   text-decoration: none;
 }

@@ -34,6 +34,13 @@ class LearnsController < ApplicationController
     end
   end
 
+  def destroy
+    @learn = Learn.find(params[:id])
+    if @learn.destroy
+      redirect_to root_path
+    end
+  end
+
   private
 
   def learn_params
