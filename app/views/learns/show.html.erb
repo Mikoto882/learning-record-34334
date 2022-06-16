@@ -1,0 +1,25 @@
+<div class="show-front">
+  <div class="show-view">
+    <div class="show-title">
+      <%= @learn.title %>
+    </div>
+    <div class="show-user-nickname">
+      <%= @learn.user.nickname %>さんの記録
+    </div>
+    <div class="details-view">
+      <div class="show-description">
+        <%= @learn.description %>
+      </div>
+      <div class="show-subject">
+        <%= @learn.subject.name %>
+      </div>
+      <div class="show-image">
+        <%= image_tag @learn.image.variant(resize: '500x500'), class: 'learn-image' if @learn.image.attached? %>
+      </div>
+      <div class="show-time">
+        <%= @learn.study_hour %>時間
+        <%= @learn.study_minutes %>分
+      </div>
+    </div>
+  </div>
+</div>

@@ -16,7 +16,7 @@
     <div class="record">
       <div class="record-top">
         <div class="record-title">
-          <%= learn.title %>
+          <%= link_to learn.title, learn_path(learn.id), method: :get %>
         </div>
         <div class="record-subject">
           <%= learn.subject.name %>
