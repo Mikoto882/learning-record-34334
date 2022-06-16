@@ -20,6 +20,9 @@
         <%= @learn.study_hour %>時間
         <%= @learn.study_minutes %>分
       </div>
+      <div class="show-btn">
+        <%= link_to "編集", edit_learn_path(@learn.id), method: :get %>
+      </div>
     </div>
   </div>
 </div>
