@@ -1,0 +1,23 @@
+<div class="show-view">
+  <div class="show-title">
+    <%= @learn.title %>
+  </div>
+  <div class="show-user-nickname">
+    <%= @learn.nickname %>さんの記録
+  </div>
+  <div class="details-view">
+    <div class="show-description">
+      <%= @learn.description %>
+    </div>
+    <div class="show-subject">
+      <%= @learn.subject.name %>
+    </div>
+    <div class="show-image">
+      <%= @learn.image %>
+    </div>
+    <div class="show-time">
+      <%= @learn.study_hour %>時間
+      <%= @learn.study_minutes %>分
+    </div>
+  </div>
+</div>
