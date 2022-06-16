@@ -22,6 +22,7 @@
       </div>
       <div class="show-btn">
         <%= link_to "編集", edit_learn_path(@learn.id), method: :get %>
+        <%= link_to "削除", learn_path(@learn.id), method: :delete %>
       </div>
     </div>
   </div>
