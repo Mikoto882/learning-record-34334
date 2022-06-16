@@ -21,6 +21,10 @@ class LearnsController < ApplicationController
     @learn = Learn.find(params[:id])
   end
 
+  def edit
+    @learn = Learn.find(params[:id])
+  end
+
   private
 
   def learn_params
