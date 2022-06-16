@@ -25,6 +25,15 @@ class LearnsController < ApplicationController
     @learn = Learn.find(params[:id])
   end
 
+  def update
+    @learn = Learn.find(params[:id])
+    if @learn.update(learn_params)
+      redirect_to learn_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def learn_params
