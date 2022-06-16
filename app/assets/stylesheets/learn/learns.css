@@ -53,6 +53,7 @@
 }
 
 /* サイドバー（ここまで） */
+
 /* 学習記録一覧 */
 
 .learn-record {
@@ -98,7 +99,8 @@
   display: flex;
 }
 
-.record-title {
+.record-title a {
+  text-decoration: none;
   font-size: 16px;
   color: #434a54;
 }
