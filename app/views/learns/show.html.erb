@@ -27,10 +27,10 @@
     </div>
   </div>
 
-  <div class="comment-form">
+  <%= form_with model:[@learn, @comment], class: "comment-form", local true do |f| %>
     <div class="comment-text-form">
-      <input class='form-comment', placeholder='コメントする'>
+      <%= f.text_field :content, class: 'form-comment', placeholder: 'コメントする' %>
     </div>
-    <input class="form-submit", type="submit", value='送信'>
-  </div>
+    <%= f.submit "送信", class: "form-submit" %>
+  <% end %>
 </div>
