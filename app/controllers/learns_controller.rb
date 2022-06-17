@@ -19,6 +19,7 @@ class LearnsController < ApplicationController
 
   def show
     @learn = Learn.find(params[:id])
+    @comment = Comment.new
   end
 
   def edit
