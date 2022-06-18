@@ -25,5 +25,29 @@
         <%= link_to "削除", learn_path(@learn.id), method: :delete %>
       </div>
     </div>
+    <div class="comment-view">
+      <div class="comment-title">
+        コメント一覧
+      </div>
+      <% @learn.comments.each do |comment| %>
+        <div class="comments">
+          <div class="comment">
+            <div class="comment-user-nickname">
+              <%= comment.user.nickname %>
+            </div>
+            <div class="comment-content">
+              <%= comment.content %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
+
+  <%= form_with model: [@learn, @comment], class: "comment-form", local: true do |f| %>
+    <div class="comment-text-form">
+      <%= f.text_field :content, class: 'form-comment', placeholder: 'コメントする' %>
+    </div>
+    <%= f.submit "送信", class: "form-submit" %>
+  <% end %>
 </div>
