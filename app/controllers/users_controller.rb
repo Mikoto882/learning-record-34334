@@ -4,7 +4,6 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     @user = User.find(params[:id])
     @learns = user.learns.order("created_at DESC")
-    @profile = Profile.find(params[:id])
   end
 
   def edit
@@ -22,7 +21,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:nickname, :email)
+    params.require(:user).permit(:nickname, :email, :introduction, :grade_id)
   end
 
 end

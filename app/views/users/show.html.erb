@@ -10,7 +10,7 @@
       <li class="list-group">高校3年生</li>
     </ul>
     <div class="profile-edit-btn">
-      <%= link_to "ユーザー情報を変更する", edit_user_profile(@profile.id), method: :get %>
+      <%= link_to "ユーザー情報を変更する", user_path(current_user.id), method: :get %>
     </div>
   </div>
 
