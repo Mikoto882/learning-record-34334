@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+  before_action :move_to_new, except: [:edit, :update]
 
   def new
     @profile = Profile.new
@@ -34,6 +35,12 @@ class ProfilesController < ApplicationController
 
   def profile_params
     params.require(:profile).permit(:introduction, :grade_id).marge(user_id: current_user.id)
+  end
+
+  def move_to_new
+    if current_user.id == nil
+      redirect_to action: :new
+    end
   end
 
 end
