@@ -48,7 +48,7 @@
 | Column       | Type       | Options           |
 | ------------ | ---------- | ----------------- |
 | introduction | text       |                   |
-| grade        | integer    |                   |
+| grade_id     | integer    |                   |
 | user         | references | foreign_key: true |
 
 ### Association
