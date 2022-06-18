@@ -20,23 +20,19 @@
   padding-top: 36px;
 }
 
-.user-name {
-  font-size: 24px;
-  color: #ffffff;
-  padding-left: 10px;
-  text-decoration: none;
-}
-
 .sign-btn {
   display: flex;
   flex-direction: column;
+  padding: 20px 0 0 20px;
+}
+
+a.user-name {
   font-size: 24px;
   color: #ffffff;
-  padding: 20px 0 0 20px;
   text-decoration: none;
 }
 
-.sign-btn a {
+a.log-out {
   font-size: 16px;
   color: #ffffff;
   padding-top: 20px;
@@ -264,6 +260,11 @@
   color: #ccc;
 }
 
+.show-user-nickname a {
+  color: #ccc;
+  text-decoration: none;
+}
+
 .details-view {
  padding: 20px 0 0 20px;
 }
@@ -322,7 +323,11 @@
 
 .comment-user-nickname {
   font-size: 14px;
+}
+
+.comment-user-nickname a {
   color: #999;
+  text-decoration: none;
 }
 
 .comment-content {

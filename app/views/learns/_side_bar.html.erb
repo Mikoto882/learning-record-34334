@@ -2,8 +2,8 @@
   <div class="list">
     <% if user_signed_in? %>
       <div class="sign-btn">
-        <%= current_user.nickname %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <%= link_to current_user.nickname, user_path(current_user.id), class: "user-name" %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log-out" %>
       </div>
     <% else %>
       <div class="sign-out-btn">
