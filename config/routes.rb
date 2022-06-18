@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :learns do
     resources :comments
   end
+  resources :users
 end
