@@ -1,0 +1,28 @@
+<div class="my-page">
+  <div class="my-page-records">
+    <div class="user-show-nickname">
+      <%= "#{@user.nickname}さんの記録一覧" %>
+    </div>
+    <% @learns.each do |learn| %>
+      <div class="record">
+        <div class="record-top">
+          <div class="record-title">
+            <%= link_to learn.title, learn_path(learn.id), method: :get %>
+          </div>
+          <div class="record-subject">
+            <%= learn.subject.name %>
+          </div>
+          <div class="record-date">
+            <%= learn.created_at %>
+          </div>
+        </div>
+        <div class="record-bottom">
+          <div class="record-text">
+            <%= learn.description %>
+          </div>
+          <%= image_tag learn.image.variant(resize: '500x500'), class: 'learn-image' if learn.image.attached? %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
