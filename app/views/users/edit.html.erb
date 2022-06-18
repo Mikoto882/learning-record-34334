@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="left-area">
+    <div class="left-title">
+      <h2>ユーザー情報の変更</h2>
+    </div>
+  </div>
+
+  <div class="right-area">
+  <%= form_with model: @user, class: 'new_user', local: true do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="form-group">
+      <div class="form-text-wrap">
+        <label class="form-text">ニックネーム</label>
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :nickname, class: "input-default", id: "nickname", maxlength: "10" %>
+    </div>
+
+    <div class="form-group">
+      <div class="form-text-wrap">
+        <label class="form-text">メールアドレス</label>
+      </div>
+      <%= f.email_field :email, class:"input-default", id:"email", autofocus: true %>
+    </div>
+
+    <div class="form-group">
+      <div class="form-text-wrap">
+        <label class="form-text">自己紹介</label>
+      </div>
+      <%= f.text_area :introduction, class: "input-default", id: "introduction", placeholder:"1000文字まで", maxlength:"1000" %>
+    </div>
+
+    <div class="form-group">
+      <div class="form-text-wrap">
+        <label class="form-text">学年</label>
+      </div>
+      <%= f.collection_select(:grade_id, Grage.all, :id, :name, {}, {class: "select-box", id: "user-grade"}) %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "変更する", class:"registration-red-btn" %>
+    </div>
+  <% end %>
+  </div>
+</div>
