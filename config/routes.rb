@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "learns#index"
   resources :learns do
-    resources :comments
+    resources :comments, only: :create
   end
-  resources :users
+  resources :users, only: :show
 end
