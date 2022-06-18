@@ -1,14 +1,25 @@
 class ProfilesController < ApplicationController
 
+  def new
+    @profile = Profile.new
+  end
+
+  def create
+    @profile = Profile.new(profile_params)
+    if @profile.save
+      redirect_to user_path
+    else
+      render :new
+    end
+  end
+
   def edit
-    @user = User.find(params[:id])
     @profile = Profile.find(parmas[:id])
   end
 
   def update
-    @user = User.find(params[:id])
     @profile = Profile.find(parmas[:id])
-    if @user.update(user_params) && @profile.update(profile_params)
+    if current_user.update(user_params) && @profile.update(profile_params)
       redirect_to user_path
     else
       render :edit
