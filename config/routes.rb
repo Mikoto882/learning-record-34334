@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   resources :learns do
     resources :comments, only: :create
   end
-  resources :users, only: :show
+  resources :users, only: :show do
+    resources :profiles, only: [:edit, :update]
+  end
 end
