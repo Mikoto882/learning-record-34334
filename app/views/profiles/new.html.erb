@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="left-area">
+    <div class="left-title">
+      <h2>プロフィール作成</h2>
+    </div>
+  </div>
+
+  <%= form_with model: @profile, local true do |f| %>
+  <div class="right-area">
+
+    <div class="form-group">
+      <div class="form-text-wrap">
+        <label class="form-text">自己紹介</label>
+      </div>
+      <%= f.text_area :introduction, class: "input-default", id: "introduction", placeholder:"1000文字まで", maxlength:"1000" %>
+    </div>
+
+    <div class="form-group">
+      <div class="form-text-wrap">
+        <label class="form-text">学年</label>
+      </div>
+      <%= f.collection_select(:grade_id, Grage.all, :id, :name, {}, {class: "select-box", id: "profile-grade"}) %>
+    </div>
+
+    <div class="learn-post-btn">
+      <%= f.submit "更新する", class: "post-btn" %>
+    </div>
+
+  </div>
+  <% end %>
+</div>
