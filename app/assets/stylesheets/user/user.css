@@ -1,12 +1,49 @@
 .my-page {
   height: 100vh;
   width: 100vw;
+  background-color: #fafafa;
+  padding: 20px 70px 0;
   overflow: scroll;
 }
 
+.my-page-title {
+  font-size: 38px;
+}
+
+.profile-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.profile-list {
+  margin-top: 30px;
+}
+
+li.profile-nickname {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+li.list-group {
+  padding: 0 0 5px 10px;
+  font-size: 16px;
+}
+
+.profile-edit-btn a {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  background-color: #99CEE2;
+  height: 42px;
+  width: 190px;
+  text-align: center;
+  padding: 12px;
+  margin-top: 40px;
+}
+
 .my-page-records {
-  background-color: #fafafa;
-  padding: 46px 70px 0;
+  margin-top: 40px;
 }
 
 .user-show-nickname {
