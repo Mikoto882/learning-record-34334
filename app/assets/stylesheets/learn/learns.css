@@ -251,7 +251,8 @@
 
 .show-view {
   height: calc(100vh - 90px);
-  padding: 50px 70px;
+  padding: 50px 70px 20px;
+  overflow: scroll;
 }
 
 .show-title {
@@ -303,8 +304,7 @@
 }
 
 .comment-view {
-  padding: 0 70px;
-  margin-bottom: 20px;
+  margin: 50px 0 0;
 }
 
 .comment-title {

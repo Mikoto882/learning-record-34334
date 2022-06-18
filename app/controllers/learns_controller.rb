@@ -19,6 +19,7 @@ class LearnsController < ApplicationController
 
   def show
     @learn = Learn.find(params[:id])
+    @comments = @learn.comments.includes(:user)
     @comment = Comment.new
   end
 

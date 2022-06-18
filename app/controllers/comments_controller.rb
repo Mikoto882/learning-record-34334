@@ -1,8 +1,10 @@
 class CommentsController < ApplicationController
 
   def create
-    Comment.create(comment_params)
-    redirect_to template: "learns/show"
+    @comment = Comment.create(comment_params)
+    if @comment.save
+      redirect_to learn_path(params[:learn_id])
+    end
   end
 
   private
