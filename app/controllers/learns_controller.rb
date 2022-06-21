@@ -43,6 +43,10 @@ class LearnsController < ApplicationController
     end
   end
 
+  def search
+    @tweets = Learn.search(params[::keyword])
+  end
+
   private
 
   def learn_params
