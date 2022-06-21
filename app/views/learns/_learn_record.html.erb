@@ -4,6 +4,10 @@
       みんなの記録一覧
     </div>
   </div>
+  <%= form_with(url: search_learns_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "記録を検索する", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
+  <% end %>
   <div class="right-header">
     <div class="record-create">
       <%= link_to "新しい記録を作る", new_learn_path %>
