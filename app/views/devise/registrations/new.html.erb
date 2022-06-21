@@ -47,6 +47,13 @@
       <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placegolder:"同じパスワードを入力してください" %>
     </div>
 
+    <div class="form-group">
+      <div class="form-text-wrap">
+        <label class="form-text">学年</label>
+      </div>
+      <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:"select-box"}) %>
+    </div>
+
     <div class="actions">
       <%= f.submit "登録する", class:"registration-red-btn" %>
     </div>

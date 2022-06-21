@@ -6,8 +6,7 @@
   </div>
 
   <div class="right-area">
-  <%= form_with model: @user, class: 'new_user', local: true do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_with model: current_user, local: true do |f| %>
 
     <div class="form-group">
       <div class="form-text-wrap">
@@ -28,14 +27,14 @@
       <div class="form-text-wrap">
         <label class="form-text">自己紹介</label>
       </div>
-      <%= f.text_area :introduction, class: "input-default", id: "introduction", placeholder:"1000文字まで", maxlength:"1000" %>
+      <%= f.text_area :introduction, class: "introduction-text", id: "introduction", placeholder:"1000文字まで", maxlength:"1000" %>
     </div>
 
     <div class="form-group">
       <div class="form-text-wrap">
         <label class="form-text">学年</label>
       </div>
-      <%= f.collection_select(:grade_id, Grage.all, :id, :name, {}, {class: "select-box", id: "user-grade"}) %>
+      <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class: "select-box", id: "user-grade"}) %>
     </div>
 
     <div class="actions">

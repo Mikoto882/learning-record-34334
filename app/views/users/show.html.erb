@@ -1,16 +1,27 @@
 <div class="my-page">
-  <div class="my-page-title">
-    マイページ
+  <div class="my-page-header">
+    <div class="my-page-title">
+      マイページ
+    </div>
+    <div class="redirect-to-top-page">
+      <%= link_to "トップページに戻る", root_path, method: :get %>
+    </div>
   </div>
 
   <div class="profile-group">
     <ul class="profile-list">
-      <li class="profile-nickname">Tom</li>
-      <li class="list-group">こんにちは、Tomです。得意教科は英語。苦手教科は数学です。大学受験に向けて精進中です！</li>
-      <li class="list-group">高校3年生</li>
+      <li class="profile-nickname">
+        <%= current_user.nickname %>
+      </li>
+      <li class="list-group">
+        <%= @user.introduction %>
+      </li>
+      <li class="list-group">
+        <%= @user.grade.name %>
+      </li>
     </ul>
     <div class="profile-edit-btn">
-      <%= link_to "ユーザー情報を変更する", user_path(current_user.id), method: :get %>
+      <%= link_to "ユーザー情報を変更する", edit_user_path(current_user.id), method: :get %>
     </div>
   </div>
 
