@@ -2,17 +2,18 @@
 
 ## users テーブル
 
-| Column             | Type   | Options                   |
-| ------------------ | ------ | ------------------------- |
-| nickname           | string | null: false               |
-| email              | string | null: false, unique: true |
-| encrypted_password | string | null: false               |
+| Column             | Type    | Options                   |
+| ------------------ | ------- | ------------------------- |
+| nickname           | string  | null: false               |
+| email              | string  | null: false, unique: true |
+| encrypted_password | string  | null: false               |
+| introduction       | text    |                           |
+| grade_id           | integer |                           |
 
 ### Association
 
 - has_many :learns
 - has_many :comments
-- has_one :profile
 
 ## learns テーブル
 
@@ -42,15 +43,3 @@
 
 - belongs_to :user
 - belongs_to :learn
-
-## profiles テーブル
-
-| Column       | Type       | Options           |
-| ------------ | ---------- | ----------------- |
-| introduction | text       |                   |
-| grade        | integer    |                   |
-| user         | references | foreign_key: true |
-
-### Association
-
-- belongs_to :user
