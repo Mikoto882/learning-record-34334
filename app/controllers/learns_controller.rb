@@ -1,4 +1,7 @@
 class LearnsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show, :search]
+  before_action :move_to_index, except: [:index, :new, :create, :show, :search]
+  before_action :set_learn, only: [:show, :edit, :update, :destroy]
 
   def index
     @learns = Learn.all.order("created_at DESC")
@@ -18,17 +21,14 @@ class LearnsController < ApplicationController
   end
 
   def show
-    @learn = Learn.find(params[:id])
     @comments = @learn.comments.includes(:user)
     @comment = Comment.new
   end
 
   def edit
-    @learn = Learn.find(params[:id])
   end
 
   def update
-    @learn = Learn.find(params[:id])
     if @learn.update(learn_params)
       redirect_to learn_path
     else
@@ -37,7 +37,6 @@ class LearnsController < ApplicationController
   end
 
   def destroy
-    @learn = Learn.find(params[:id])
     if @learn.destroy
       redirect_to root_path
     end
@@ -51,6 +50,17 @@ class LearnsController < ApplicationController
 
   def learn_params
     params.require(:learn).permit(:image, :title, :description, :subject_id, :study_hour, :study_minutes).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    @learn = Learn.find(params[:id])
+    unless user_signed_in? && current_user.id == @learn.user_id
+      redirect_to action: :index
+    end
+  end
+
+  def set_learn
+    @learn = Learn.find(params[:id])
   end
 
 end

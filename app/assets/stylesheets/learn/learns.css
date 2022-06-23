@@ -39,7 +39,7 @@ a.log-out {
   text-decoration: none;
 }
 
-.sign-out-btn {
+.sign-out-btn a {
   display: flex;
   flex-direction: column;
   font-size: 16px;
@@ -110,7 +110,7 @@ a.log-out {
 }
 
 .record {
-  margin-top: 10px;
+  margin: 10px 0 40px;
 }
 
 .record-top {
@@ -142,7 +142,7 @@ a.log-out {
 .record-text {
   font-size: 14px;
   color: #434a54;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 /* 学習記録一覧（ここまで） */
