@@ -1,0 +1,40 @@
+<div class="record-header">
+  <div class="header-left">
+    <div class="header-title">
+      検索結果の記録
+    </div>
+  </div>
+  <%= form_with(url: search_learns_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "記録を検索する", class: "search-input" %>
+    <%= form.submit "検索", class: "search-btn" %>
+  <% end %>
+  <div class="right-header">
+    <div class="record-create">
+      <%= link_to "新しい記録を作る", new_learn_path %>
+    </div>
+  </div>
+</div>
+
+<div class="records">
+  <% @learns.each do |learn| %>
+    <div class="record">
+      <div class="record-top">
+        <div class="record-title">
+          <%= link_to learn.title, learn_path(learn.id), method: :get %>
+        </div>
+        <div class="record-subject">
+          <%= learn.subject.name %>
+        </div>
+        <div class="record-date">
+          <%= learn.created_at %>
+        </div>
+      </div>
+      <div class="record-bottom">
+        <div class="record-text">
+          <%= learn.description %>
+        </div>
+        <%= image_tag learn.image.variant(resize: '500x500'), class: 'learn-image' if learn.image.attached? %>
+      </div>
+    </div>
+  <% end %>
+</div>

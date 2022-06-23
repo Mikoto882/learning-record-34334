@@ -44,7 +44,7 @@ class LearnsController < ApplicationController
   end
 
   def search
-    @tweets = Learn.search(params[::keyword])
+    @learns = Learn.search(params[:keyword])
   end
 
   private
