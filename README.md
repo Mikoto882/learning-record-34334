@@ -27,15 +27,15 @@
 
 ## 新規記録投稿機能
 
-<img src="https://i.gyazo.com/73e644959f05f2966644a1de33019818.mp4">
+![result]("https://i.gyazo.com/73e644959f05f2966644a1de33019818.mp4")
 
 ## コメント投稿機能
 
-<img src="https://i.gyazo.com/0e05eec867d7c3c337764c81f79ed022.mp4">
+![result]("https://i.gyazo.com/0e05eec867d7c3c337764c81f79ed022.mp4")
 
 ## 投稿検索機能
 
-<img src="https://i.gyazo.com/ab78c56f6c8a4b19b72f1012bb66abf1.mp4">
+![result]("https://i.gyazo.com/ab78c56f6c8a4b19b72f1012bb66abf1.mp4")
 
 # 工夫したポイント
 
