@@ -8,12 +8,12 @@
 
 # 本番環境
 
-`$ https://learning-record-34334.herokuapp.com/`
+<https://learning-record-34334.herokuapp.com/>
 
 ログイン情報（テスト用）
 
-  ・Eメール : learn@test
-  ・パスワード : study1234
+・Eメール : learn@test
+・パスワード : study1234
 
 # 制作背景
 
