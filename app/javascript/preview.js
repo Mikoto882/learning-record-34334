@@ -5,17 +5,18 @@ document.addEventListener('DOMContentLoaded', function(){
   const previewList = document.getElementById('previews');
   // 新規投稿・編集ページフォームがないならここで終了
   if (!learnForm) return null;
-  console.log("preview.jsが読み込まれました");
 
   // input要素を取得
   const fileField = document.querySelector('input[type="file"][name="learn[image]"]');
   // input要素で値の変化が起きた際に呼び出される関数
   fileField.addEventListener('change', function(e){
-    console.log("input要素で値の変化が起きました");
-    console.log(e.target.files[0]);
+    // 古いプレビューが存在する場合は削除
+    const alreadyPreview = document.querySelector('.preview');
+    if (alreadyPreview) {
+      alreadyPreview.remove();
+    };
     const file = e.target.files[0];
     const blob = window.URL.createObjectURL(file);
-    console.log(blob);
     // 画像を表示するためのdiv要素を生成
     const previewWrapper = document.createElement('div');
     previewWrapper.setAttribute('class', 'preview');
