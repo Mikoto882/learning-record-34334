@@ -3,7 +3,7 @@
     <h2>新しい記録</h2>
   </div>
 
-  <%= form_with model: @learn, url: learns_path, local: true do |f| %>
+  <%= form_with model: @learn, url: learns_path, id: 'new_learn', local: true do |f| %>
 
   <div class="learn-form-group">
     <div class="weight-bold-text">
@@ -47,8 +47,9 @@
       画像
     </div>
     <label class="form-image">
+      <div id="previews"></div>
       <span class="image-file">画像を選択する</span>
-      <%= f.file_field :image, class: "hidden" %>
+      <%= f.file_field :image, name: 'learn[image]', class: "hidden" %>
     </label>
   </div>
 
