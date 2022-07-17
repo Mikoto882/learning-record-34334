@@ -221,6 +221,12 @@ a.log-out {
   padding: 0 0 10px 10px;
 }
 
+.preview-image {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+}
+
 .image-file {
   font-size: 12px;
   background-color: #99CEE2;
